@@ -1,0 +1,39 @@
+﻿@model  NLogDemoApp.user
+@{
+    ViewBag.Title = "Login";
+}
+<div class="container col-4">
+    <a href="~/Views/Login/Login.cshtml">~/Views/Login/Login.cshtml</a>
+    <h2 class="text-success">Login</h2>
+    @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+    {
+        <table class="table table-bordered table-hover">
+            <tr>
+                <td class="text-danger">@Html.LabelFor(a => a.username)</td>
+                <td>@Html.TextBoxFor(a => a.username, htmlAttributes: new { @id = "CurrentUserName", @class = "form-control", @required = "true", @type = "text" })</td>
+            </tr>
+
+            <tr>
+                <td class="text-danger">
+
+                    @Html.LabelFor(a => a.password)
+                </td>
+                <td>
+                    @Html.PasswordFor(a => a.password, htmlAttributes: new { @id = "CurrentPassword", @class = "form-control", @required = "true", @type = "text" })
+                </td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+
+                    </div>
+                </td>
+
+            </tr>
+        </table>
+    }
+</div>

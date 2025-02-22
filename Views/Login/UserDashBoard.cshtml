@@ -1,0 +1,13 @@
+﻿
+@model  NLogDemoApp.user
+
+@{
+    ViewBag.Title = "UserDashBoard";
+}
+
+  <h1 class="text-success">Welcome @Session["UserName"].ToString() </h1>
+<br /><br /><br /><br />
+  <h3>@Html.ActionLink("Go Back To Home Page", "Login", "Login")</h3>
+
+
+
