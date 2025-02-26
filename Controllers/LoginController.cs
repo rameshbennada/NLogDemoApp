@@ -16,7 +16,7 @@ namespace NLogDemoApp.Controllers
         // GET: Login
         public ActionResult Login()
         {
-            return View("login");
+            return View("login"); //27/02/2025
         }
 
         //[HttpPost]
